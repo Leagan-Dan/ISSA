@@ -1,0 +1,5 @@
+
+ipython:S11928"LDefine a constant instead of duplicating this literal "({}) : {}\n" 3 times.(Û‹ºÖýÿÿÿÿ
+Qpython:S1481j"-Remove the unused local variable "client_id".(´ê‡Œýÿÿÿÿ8¢¦±¹þ0
+¢python:S1515£"ƒAdd a parameter to function "f" and use variable "c" as its default value;The value of "c" might change at the next loop iteration.(¥ªì…üÿÿÿÿ
+Apython:S108¦")Either remove or fill this block of code.(ã‘Û¾

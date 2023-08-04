@@ -1,0 +1,68 @@
+1. the client is the mobile app, meaning the owner or the renter, and the car.
+The server is the producer backend.
+
+------------
+
+2. the renter client comunicates with the server (backend), and then 
+the server comunicates with the owner client, in order to establish
+the two user's comunication. this comunication works both ways, and
+is used when the renter sends a rent request, and the owner receives it.
+
+
+------------
+
+3.the scope of the mobile app is to give the owner and the renter
+an interface, in order to establish communication 
+
+the scope of the server backend is to receive and send messages 
+between mobile app clients(renter and owner) and to accept or 
+decline rent requests, according to what the owner wants
+
+the scope of the car is to unlock or lock whenever the 
+server demands it, or to  send other information about itself.
+
+------------
+
+4.
+1)client app (renter) -> server: register renter
+client_id 1 1 identifier
+
+2)client app (owner) -> server: register owner
+client_id 0 1 identifier
+
+3)client app (owner) -> server: post car
+client_id 0 2 
+
+4)client app (renter) -> server: request car
+client_id 1 3
+
+5)server -> client app (owner) : request car from client id
+
+6)client app (owner) -> server: accept rent request
+client_id 0 4 
+
+7)client app (owner) -> server: decline rent request
+client_id 0 5
+
+8)client app (renter) -> server : unlock car
+client_id 1 6
+
+9)client app (renter) -> server : lock car
+client_id 1 7
+
+10) client app (renter) -> server : end rental
+client_id 1 8
+
+11)server -> car : unlock/lock car 
+client_id 9
+
+12)client -> server
+client_id 1 10
+server -> car : request information
+client_id 10
+
+13)car -> server : send information
+client_id 11 car_info
+
+client_id car = 9
+client_id owner = 0
